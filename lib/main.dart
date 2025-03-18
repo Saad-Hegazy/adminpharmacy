@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
-      title: 'Foodi1 Admin',
+      title: 'Pharmacy Admin',
       locale: controller.language,
       theme: controller.appTheme,
       initialBinding: InitialBindings(),

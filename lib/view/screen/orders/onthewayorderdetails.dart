@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -5,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../../controller/orders/details_controller.dart';
 import '../../../core/class/handlingdataview.dart';
 import '../../../core/constant/color.dart';
+import '../../../linkapi.dart';
 
 class OnTheWayOrdersDetails extends StatelessWidget {
   const OnTheWayOrdersDetails({super.key});
@@ -33,6 +35,11 @@ class OnTheWayOrdersDetails extends StatelessWidget {
                           Table(
                             children: [
                               TableRow(children: [
+                                Text("Image",
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: AppColor.primaryColor,
+                                        fontWeight: FontWeight.bold)),
                                 Text("Item",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
@@ -52,6 +59,17 @@ class OnTheWayOrdersDetails extends StatelessWidget {
                               ...List.generate(
                                   controller.data.length,
                                       (index) => TableRow(children: [
+                                        CachedNetworkImage(
+                                          imageUrl: "${AppLink.imagestItems}/${controller.data[index]["items_image"]}",
+                                          height: 80,
+                                          width: 80,
+                                          fit: BoxFit.cover,// Ensure image fits within the space
+                                          alignment : Alignment. center,
+                                          placeholder: (context, url) => CircularProgressIndicator(
+                                            color: AppColor.primaryColor,
+                                          ),
+                                          errorWidget: (context, url, error) => Icon(Icons.error, color: Colors.red),
+                                        ),
                                     Text("${controller.data[index].itemsName}",
                                         textAlign: TextAlign.center),
                                     Text("${controller.data[index].countitems}", textAlign: TextAlign.center),
@@ -63,7 +81,7 @@ class OnTheWayOrdersDetails extends StatelessWidget {
                           SizedBox(height: 10),
                           Container(
                             padding: EdgeInsets.symmetric(horizontal: 10),
-                            child:   Text("Total Price : ${controller.ordersModel.ordersTotalprice?.toStringAsFixed(2)}\S\A\R",
+                            child:   Text("Total Price : ${controller.ordersModel.ordersTotalprice?.toStringAsFixed(2)} ${"215".tr}",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: AppColor.primaryColor,

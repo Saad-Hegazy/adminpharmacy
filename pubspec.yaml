@@ -87,6 +87,9 @@ dependencies:
   file_picker: ^8.1.7
   googleapis: ^13.2.0
   app_settings: ^5.1.1
+  html: ^0.15.5
+
+
 
 dev_dependencies:
   flutter_test:

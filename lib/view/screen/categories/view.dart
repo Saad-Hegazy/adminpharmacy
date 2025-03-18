@@ -5,6 +5,7 @@ import 'package:adminpharmacy/linkapi.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 import '../../../core/constant/color.dart';
 class CategoriesView extends StatelessWidget {
@@ -44,7 +45,11 @@ class CategoriesView extends StatelessWidget {
                             padding: EdgeInsets.all(4),
                             child: CachedNetworkImage(
                               height: 80,
-                              imageUrl: "${AppLink.imagestCategories}/${controller.data[index].categoriesImage}", ),
+                              imageUrl: "${AppLink.imagestCategories}/${controller.data[index].categoriesImage}",
+                              errorWidget: (context, url, error) => Icon(Icons.broken_image, color: Colors.red),
+                              placeholder: (context, url) => CircularProgressIndicator(),
+                              fit: BoxFit.cover,
+                            ),
                           )),
                           Expanded(
                               flex:3,
@@ -65,28 +70,26 @@ class CategoriesView extends StatelessWidget {
                                                     controller.data[index].categoriesImage!
                                                 );
                                                 Get.back();
-                                              }
-                                          );
+                                              });
                                         }, icon: Icon(Icons.delete)),
-                             
                                   ],
                                 ),
-                                subtitle:Text(controller.data[index].categoriesDatetime!),
+                                subtitle:       Text(
+                                  DateFormat('dd-MMM-yyyy').format(
+                                    DateTime.parse(controller.data[index].categoriesDatetime!),
+                                  ),    style: const TextStyle(
+                                    color: AppColor.primaryColor,
+                                    fontSize:12),
+                                ),
                                 title: Text(controller.data[index].categoriesName!),
                               )
-                          )
-                          ],
-                      
+                          )],
                         ),
                       ),
-                    );
-                  }
+                    );}
                 )),
-
-            )
-        )
+            ))
       ),
-
     );
   }
 }

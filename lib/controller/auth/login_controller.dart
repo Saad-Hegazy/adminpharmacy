@@ -45,7 +45,6 @@ class LoginControllerImp extends LoginController {
       statusRequest = handlingData(response);
       if (StatusRequest.success == statusRequest) {
         if (response['status'] == "success") {
-          // data.addAll(response['data']);
             myServices.sharedPreferences.setString("id", response['data']['admin_id'].toString());
             String adminid = myServices.sharedPreferences.getString("id")!;
             myServices.sharedPreferences.setString("username", response['data']['admin_name']);
@@ -59,9 +58,7 @@ class LoginControllerImp extends LoginController {
             NotificationService notificationService =NotificationService();
             String DeviceToken =await notificationService.getDeviceToken();
             myServices.sharedPreferences.setString("DeviceToken", DeviceToken);
-
             Get.offNamed(AppRoute.homepage);
-
         } else {
           Get.defaultDialog(title: "ُWarning" , middleText: "Email Or Password Not Correct");
           statusRequest = StatusRequest.failure;

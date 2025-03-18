@@ -15,14 +15,8 @@ class CartModel {
   int? itemsquantityinbox;
   int? cartitemisbox;
   num? itemspricrofbox;
-  num? itemspricrofboxmerchant;
-  num? itemspricrofboxmosque;
   num? itemsPrice;
   num? itemsDescount;
-  num? itemsPriceMerchant;
-  num? itemsDescountMerchant;
-  num? itemsPriceMosque;
-  num? itemsDescountMosque;
   String? itemsDate;
   int? itemsCat;
 
@@ -44,14 +38,8 @@ class CartModel {
         this.itemsquantityinbox,
         this.cartitemisbox,
         this.itemspricrofbox,
-        this.itemspricrofboxmerchant,
-        this.itemspricrofboxmosque,
         this.itemsPrice,
         this.itemsDescount,
-        this.itemsPriceMerchant,
-        this.itemsDescountMerchant,
-        this.itemsPriceMosque,
-        this.itemsDescountMosque,
         this.itemsDate,
         this.itemsCat});
 
@@ -72,14 +60,8 @@ class CartModel {
     itemsquantityinbox = json['items_quantityinbox'];
     cartitemisbox = json['cart_itemisbox'];
     itemspricrofbox = json['items_pricrofbox'];
-    itemspricrofboxmerchant = json['items_pricrofbox_merchant'];
-    itemspricrofboxmosque = json['items_pricrofbox_mosque'];
     itemsPrice = json['items_price'];
     itemsDescount = json['items_descount'];
-    itemsPriceMerchant = json['items_price_merchant'];
-    itemsPriceMosque = json['items_price_mosque'];
-    itemsDescountMosque = json['items_descount_mosque'];
-    itemsDescountMerchant = json['items_descount_Merchant'];
     itemsDate = json['items_date'];
     itemsCat = json['items_cat'];
   }
@@ -102,14 +84,8 @@ class CartModel {
     data['items_quantityinbox'] = itemsquantityinbox;
     data['cart_itemisbox'] = cartitemisbox;
     data['items_pricrofbox'] = itemspricrofbox;
-    data['items_pricrofbox_merchant'] = itemspricrofboxmerchant;
-    data['items_pricrofbox_mosque'] = itemspricrofboxmosque;
     data['items_price'] = this.itemsPrice;
     data['items_descount'] = this.itemsDescount;
-    data['items_price_merchant'] = this.itemsPriceMerchant;
-    data['items_price_mosque'] = this.itemsPriceMosque;
-    data['items_descount_mosque'] = this.itemsDescountMosque;
-    data['items_descount_Merchant'] = this.itemsDescountMerchant;
     data['items_date'] = this.itemsDate;
     data['items_cat'] = this.itemsCat;
     return data;

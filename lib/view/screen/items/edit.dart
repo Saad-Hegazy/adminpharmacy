@@ -89,45 +89,9 @@ class ItemsEdit extends StatelessWidget {
                   isNumber: true),
               CustomTextFormGlobal(
                   hinttext:  "price",
-                  labeltext: "price  for Box Merchant",
-                  iconData: Icons.category,
-                  mycontroller:  controlle.priceForMerchant,
-                  valid:  (val){
-                    return validInput(val!, 1, 100, "");
-                  },
-                  isNumber: true),
-              CustomTextFormGlobal(
-                  hinttext:  "price",
-                  labeltext: "price  for Box Mosque",
-                  iconData: Icons.category,
-                  mycontroller:  controlle.priceForMosque,
-                  valid:  (val){
-                    return validInput(val!, 1, 100, "");
-                  },
-                  isNumber: true),
-              CustomTextFormGlobal(
-                  hinttext:  "price",
                   labeltext: "price",
                   iconData: Icons.category,
                   mycontroller:  controlle.price,
-                  valid:  (val){
-                    return validInput(val!, 1, 100, "");
-                  },
-                  isNumber: true),
-              CustomTextFormGlobal(
-                  hinttext:  "price For Merchant",
-                  labeltext: "price For Merchant",
-                  iconData: Icons.category,
-                  mycontroller:  controlle.priceForMerchant,
-                  valid:  (val){
-                    return validInput(val!, 1, 100, "");
-                  },
-                  isNumber: true),
-              CustomTextFormGlobal(
-                  hinttext:  "price For Mosque",
-                  labeltext: "price For Mosque",
-                  iconData: Icons.category,
-                  mycontroller:  controlle.priceForMosque,
                   valid:  (val){
                     return validInput(val!, 1, 100, "");
                   },
@@ -137,24 +101,6 @@ class ItemsEdit extends StatelessWidget {
                   labeltext: "Discount",
                   iconData: Icons.category,
                   mycontroller:  controlle.discount,
-                  valid:  (val){
-                    return validInput(val!, 1, 30, "");
-                  },
-                  isNumber: true),
-              CustomTextFormGlobal(
-                  hinttext:  "Discount For Merchant",
-                  labeltext: "Discount For Merchant",
-                  iconData: Icons.category,
-                  mycontroller:  controlle.discountForMerchant,
-                  valid:  (val){
-                    return validInput(val!, 1, 30, "");
-                  },
-                  isNumber: true),
-              CustomTextFormGlobal(
-                  hinttext:  "Discount For Mosque",
-                  labeltext: "Discount For Mosque",
-                  iconData: Icons.category,
-                  mycontroller:  controlle.discountForMosque,
                   valid:  (val){
                     return validInput(val!, 1, 30, "");
                   },

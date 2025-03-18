@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import '../../../controller/orders/pending_controller.dart';
 import '../../../core/constant/color.dart';
 import 'package:flutter/material.dart';
@@ -26,18 +27,19 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                           fontSize: 18, fontWeight: FontWeight.bold)),
                   const Spacer(),
                   Text(
-                    listdata.ordersDatetime!,
-                    style: const TextStyle(
-                        color: AppColor.primaryColor,
-                        fontWeight: FontWeight.bold),
+                    DateFormat('dd-MMM-yyyy').format(
+                      DateTime.parse(listdata.ordersDatetime!,),
+                    ),    style: const TextStyle(
+                      color: AppColor.primaryColor,
+                      fontSize:12),
                   )
                 ],
               ),
               Divider(),
-              Text("Order Price : ${listdata.ordersPrice?.toStringAsFixed(2)} \S\A\R"),
+              Text("Order Price : ${listdata.ordersPrice?.toStringAsFixed(2)}  ${"215".tr}"),
               Text("Payment Method : ${controller.printPaymentMethod(listdata.ordersPaymentmethod!)}"),
               const Divider(),
-              Text("Total Price : ${listdata.ordersTotalprice!.toStringAsFixed(2)} \S\A\R ",
+              Text("Total Price : ${listdata.ordersTotalprice!.toStringAsFixed(2)}  ${"215".tr} ",
                         style: const TextStyle(
                             color: AppColor.primaryColor,
                             fontWeight: FontWeight.bold)),

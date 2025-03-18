@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import '../../../controller/orders/ontheway_controller.dart';
 import '../../../controller/orders/orderscompletedView_controller.dart';
 import '../../../core/constant/color.dart';
@@ -27,25 +28,26 @@ class CardOrdersListOnTheWay extends GetView<OnTheWayOrdersController> {
                   const Spacer(),
                   // Text(listdata.ordersDatetime!)
                   Text(
-                    listdata.ordersDatetime!,
-                    style: const TextStyle(
-                        color: AppColor.primaryColor,
-                        fontWeight: FontWeight.bold),
+                    DateFormat('dd-MMM-yyyy').format(
+                      DateTime.parse(listdata.ordersDatetime!,),
+                    ),    style: const TextStyle(
+                      color: AppColor.primaryColor,
+                      fontSize:12),
                   )
                 ],
               ),
               const Divider(),
               Text(
                   "Order Type : ${controller.printOrderType(listdata.ordersType!)}"),
-              Text("Order Price : ${listdata.ordersPrice} \S\A\R"),
-              Text("Delivery Price : ${listdata.ordersPricedelivery} \S\A\R"),
+              Text("Order Price : ${listdata.ordersPrice}  ${"215".tr}"),
+              Text("Delivery Price : ${listdata.ordersPricedelivery}  ${"215".tr}"),
               Text(
                   "Payment Method : ${controller.printPaymentMethod(listdata.ordersPaymentmethod!)} "),
               Text(
                   "Order Status : ${controller.printOrderStatus(listdata.ordersStatus!)} "),
               const Divider(),
 
-                  Text("Total Price : ${listdata.ordersTotalprice!.toStringAsFixed(2)} \S\A\R ",
+                  Text("Total Price : ${listdata.ordersTotalprice!.toStringAsFixed(2)}  ${"215".tr} ",
                       style: const TextStyle(
                           color: AppColor.primaryColor,
                           fontWeight: FontWeight.bold)),

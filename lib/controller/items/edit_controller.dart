@@ -27,14 +27,8 @@ class  ItemEditController extends GetxController{
   late TextEditingController count;
   late TextEditingController quantityinboxnt;
   late TextEditingController pricrofbox;
-  late TextEditingController pricrofboxmerchant;
-  late TextEditingController pricrofboxmosque;
   late TextEditingController price;
-  late TextEditingController priceForMerchant;
-  late TextEditingController priceForMosque;
   late TextEditingController discount;
-  late TextEditingController discountForMerchant;
-  late TextEditingController discountForMosque;
   late TextEditingController  catname;
   late TextEditingController  catid;
   File? file;
@@ -67,14 +61,8 @@ class  ItemEditController extends GetxController{
         "count":count.text,
         "quantityinboxnt":quantityinboxnt.text,
         "pricrofbox":pricrofbox.text,
-        "pricrofboxmerchant":pricrofboxmerchant.text,
-        "pricrofboxmosque":pricrofboxmosque.text,
         "price":price.text,
-        "pricemerchant":priceForMerchant.text,
-        "pricemosque":priceForMosque.text,
         "discount":discount.text,
-        "discountmerchant":discountForMerchant.text,
-        "discountmosque":discountForMosque.text,
         "catid":catid.text,
         "imageold":itemsModel!.itemsImage,
         "datenow":DateTime.now().toString(),
@@ -161,16 +149,8 @@ class  ItemEditController extends GetxController{
     count =TextEditingController();
     quantityinboxnt =TextEditingController();
     price =TextEditingController();
-
     pricrofbox =TextEditingController();
-    pricrofboxmerchant =TextEditingController();
-    pricrofboxmosque =TextEditingController();
-
-    priceForMerchant =TextEditingController();
-    priceForMosque =TextEditingController();
     discount =TextEditingController();
-    discountForMerchant =TextEditingController();
-    discountForMosque =TextEditingController();
     catid =TextEditingController();
     catname =TextEditingController();
     name.text= itemsModel!.itemsName!;
@@ -179,17 +159,9 @@ class  ItemEditController extends GetxController{
     desc_ar.text=itemsModel!.itemsDescAr!;
     count.text=itemsModel!.itemsCount!.toString();
     quantityinboxnt.text=itemsModel!.itemsquantityinbox!.toString();
-
     pricrofbox.text=itemsModel!.itemspricrofbox!.toString();
-    pricrofboxmerchant.text=itemsModel!.itemspricrofboxmerchant!.toString();
-    pricrofboxmosque.text=itemsModel!.itemspricrofboxmosque!.toString();
-
     price.text=itemsModel!.itemsPrice!.toString();
-    priceForMerchant.text=itemsModel!.itemsPriceMerchant!.toString();
-    priceForMosque.text=itemsModel!.itemsPriceMosque!.toString();
     discount.text=itemsModel!.itemsDescount!.toString();
-    discountForMerchant.text=itemsModel!.itemsDescountMerchant!.toString();
-    discountForMosque.text=itemsModel!.itemsDescountMosque!.toString();
     catid.text=itemsModel!.categoriesId!.toString();
     catname.text=itemsModel!.categoriesName!;
     dropdownname = TextEditingController();
@@ -206,16 +178,8 @@ class  ItemEditController extends GetxController{
     count.dispose();
     quantityinboxnt.dispose();
     price.dispose();
-
     pricrofbox.dispose();
-    pricrofboxmerchant.dispose();
-    pricrofboxmosque.dispose();
-
-    priceForMerchant.dispose();
-    priceForMosque.dispose();
     discount.dispose();
-    discountForMerchant.dispose();
-    discountForMosque.dispose();
     dropdownname.dispose();
     dropdownid.dispose();
     super.dispose();

@@ -1,22 +1,23 @@
 class AppImageAsset {
   static const String rootImages = "assets/images";
   static const String rootLottie = "assets/lottie";
-  static const String logo            = "$rootImages/logoapp.png" ;
+  static const String logo            = "$rootImages/logo.png" ;
   static const String onBoardingImageOne    = "$rootImages/one.svg" ;
   static const String onBoardingImageTwo    = "$rootImages/two.svg" ;
   static const String onBoardingImageThree  = "$rootImages/three.svg" ;
 
 
   static const String orderscompleted  = "$rootImages/orderscompleted.png" ;
+  static const String canceledorder  = "$rootImages/canceledorder.png" ;
+  static const String rejectedorder  = "$rootImages/rejectedorder.png" ;
 
 
 
 
-  static const String ecommerce = "$rootLottie/ecommerce.json";
-  static const String loading = "$rootLottie/cart.json";
+  static const String loading = "$rootLottie/loading.json";
   static const String offline = "$rootLottie/offline.json";
   static const String noData = "$rootLottie/nodata.json";
-  static const String server = "$rootLottie/server.json";
+  static const String server = "$rootLottie/servererorr.json";
 
   static const String avatar = "$rootImages/avatar.png" ;
   static const String delivery = "$rootImages/delivery.png" ;
@@ -34,3 +35,7 @@ class AppImageAsset {
   static const String couponimage = "$rootImages/coupon.png" ;
 
 }
+
+
+
+

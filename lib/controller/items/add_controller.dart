@@ -27,14 +27,8 @@ class  ItemsAddController extends GetxController{
   late TextEditingController count;
   late TextEditingController quantityinboxnt;
   late TextEditingController pricrofbox;
-  late TextEditingController pricrofboxmerchant;
-  late TextEditingController pricrofboxmosque;
   late TextEditingController price;
-  late TextEditingController priceForMerchant;
-  late TextEditingController priceForMosque;
   late TextEditingController discount;
-  late TextEditingController discountForMerchant;
-  late TextEditingController discountForMosque;
   TextEditingController?  catname;
   TextEditingController?  catid;
   File? file;
@@ -52,14 +46,8 @@ class  ItemsAddController extends GetxController{
       "count":count.text,
       "quantityinboxnt":quantityinboxnt.text,
       "pricrofbox":pricrofbox.text,
-      "pricrofboxmerchant":pricrofboxmerchant.text,
-      "pricrofboxmosque":pricrofboxmosque.text,
       "price":price.text,
-      "pricemerchant":priceForMerchant.text,
-      "pricemosque":priceForMosque.text,
       "discount":discount.text,
-      "discountmerchant":discountForMerchant.text,
-      "discountmosque":discountForMosque.text,
       "datenow":DateTime.now().toString(),
       "catid":catid!.text,
     };
@@ -151,16 +139,8 @@ class  ItemsAddController extends GetxController{
     count =TextEditingController();
     quantityinboxnt =TextEditingController();
     price =TextEditingController();
-
     pricrofbox =TextEditingController();
-    pricrofboxmerchant =TextEditingController();
-    pricrofboxmosque =TextEditingController();
-
-    priceForMerchant =TextEditingController();
-    priceForMosque =TextEditingController();
     discount =TextEditingController();
-    discountForMerchant =TextEditingController();
-    discountForMosque =TextEditingController();
     catid =TextEditingController();
     catname =TextEditingController();
     dropdownname = TextEditingController();
@@ -176,16 +156,8 @@ class  ItemsAddController extends GetxController{
     count.dispose();
     quantityinboxnt.dispose();
     price.dispose();
-
     pricrofbox.dispose();
-    pricrofboxmerchant.dispose();
-    pricrofboxmosque.dispose();
-
-    priceForMerchant.dispose();
-    priceForMosque.dispose();
     discount.dispose();
-    discountForMerchant.dispose();
-    discountForMosque.dispose();
     dropdownname.dispose();
     dropdownid.dispose();
     super.dispose();

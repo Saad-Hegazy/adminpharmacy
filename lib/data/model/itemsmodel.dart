@@ -11,13 +11,7 @@ class ItemsModel {
   int? itemsquantityinbox;
   num? itemsPrice;
   num? itemspricrofbox;
-  num? itemspricrofboxmerchant;
-  num? itemspricrofboxmosque;
-  num? itemsPriceMerchant;
-  num? itemsPriceMosque;
   num? itemsDescount;
-  num? itemsDescountMosque;
-  num? itemsDescountMerchant;
   String? itemsDate;
   int? itemsCat;
   int? categoriesId;
@@ -38,13 +32,7 @@ class ItemsModel {
         this.itemsquantityinbox,
         this.itemsPrice,
         this.itemspricrofbox,
-        this.itemspricrofboxmerchant,
-        this.itemspricrofboxmosque,
-        this.itemsPriceMerchant,
-        this.itemsPriceMosque,
         this.itemsDescount,
-        this.itemsDescountMosque,
-        this.itemsDescountMerchant,
         this.itemsDate,
         this.itemsCat,
         this.categoriesId,
@@ -66,13 +54,7 @@ class ItemsModel {
     itemsquantityinbox = json['items_quantityinbox'];
     itemsPrice = json['items_price'];
     itemspricrofbox = json['items_pricrofbox'];
-    itemspricrofboxmerchant = json['items_pricrofbox_merchant'];
-    itemspricrofboxmosque = json['items_pricrofbox_mosque'];
-    itemsPriceMerchant = json['items_price_merchant'];
-    itemsPriceMosque = json['items_price_mosque'];
     itemsDescount = json['items_descount'];
-    itemsDescountMosque = json['items_descount_mosque'];
-    itemsDescountMerchant = json['items_descount_Merchant'];
     itemsDate = json['items_date'];
     itemsCat = json['items_cat'];
     categoriesId = json['categories_id'];
@@ -96,13 +78,7 @@ class ItemsModel {
     data['items_quantityinbox'] = itemsquantityinbox;
     data['items_price'] = this.itemsPrice;
     data['items_pricrofbox'] = itemspricrofbox;
-    data['items_pricrofbox_merchant'] = itemspricrofboxmerchant;
-    data['items_pricrofbox_mosque'] = itemspricrofboxmosque;
-    data['items_price_merchant'] = this.itemsPriceMerchant;
-    data['items_price_mosque'] = this.itemsPriceMosque;
     data['items_descount'] = this.itemsDescount;
-    data['items_descount_mosque'] = this.itemsDescountMosque;
-    data['items_descount_Merchant'] = this.itemsDescountMerchant;
     data['items_date'] = this.itemsDate;
     data['items_cat'] = this.itemsCat;
     data['categories_id'] = this.categoriesId;

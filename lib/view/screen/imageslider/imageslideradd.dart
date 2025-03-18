@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../controller/imageslider/imageslideradd_controller.dart';
 import '../../../core/shared/custombutton.dart';
-import '../../widget/imageslider/chooseusershowingimage.dart';
 class ImageSliderAdd extends StatelessWidget {
   const ImageSliderAdd({super.key});
   @override
@@ -33,7 +32,6 @@ class ImageSliderAdd extends StatelessWidget {
                     return validInput(val!, 1, 200, "");
                   },
                   isNumber: false),
-              chooseUserType(addImageSliderController: controller,),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: MaterialButton(
